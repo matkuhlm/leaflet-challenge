@@ -9,9 +9,9 @@ html {
   height: 100%;
 }
 .legend {
-  padding: 10px;
-  line-height: 18px;
+  padding: 12px;
+  line-height: 20px;
   color: #555;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
 }
