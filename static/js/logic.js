@@ -74,7 +74,25 @@ function getRadius(magnitude){
 
 
 
-    })}).addTo(myMap);
+    }).addTo(myMap);
+//make legend
+var legend = L.control({
+    position: "bottomright"
 
+});
+legend.onAdd = function(){
+    var div = L.DomUtil.create("div", "info legend")
+    var grades = [0, 1, 2, 3, 4, 5];
+    var colors = [ "#98ee00","#d4ee00","#eecc00","#ee9c00","#ea822c","#ea2c2c"]
 
+    //loop and assign grade
+    for (var i = 0; i < grades.length; i++){
+        div.innerHtml +=
+        "<i style= 'background: '"+ colors[i] + "'></i> " + grades[i] + (grades i + 1) ;
 
+    }
+    return div;
+};
+//add to map
+legend.addTo(eqMap)
+});
